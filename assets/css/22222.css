@@ -1,0 +1,209 @@
+/* 观看此视频之前可以看一下上个视频简介 接上个视频发的哈 */
+* {
+	/* 初始化 清除元素的内外边距 */
+	padding: 0;
+	margin: 0;
+	/* 盒子模型 */
+	box-sizing: border-box;
+}
+
+.navbar {
+	/* 相对定位 */
+	position: relative;
+	width: 100%;
+	height: 0px;
+	line-height: 50px;
+	background-color: #fff;
+	
+	/* 盒子阴影 */
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+	
+}
+.navbar input {
+	/* 隐藏元素 */
+	display: none;
+}
+.navbar label {
+	/* 绝对定位 */
+	position: absolute;
+	top: 0;
+	left: 0px;
+	font-size: 20px;
+	color: rgb(247, 241, 241);
+	padding-left: 20px;
+	cursor: pointer;
+	/* 加过渡 */
+	transition: all 0.5s;}
+	
+.navbar ul {
+    position: absolute;
+	top: 0;
+	left: -350px;
+	width: 350px;
+	/* 高度占浏览器可视区域的高度 */
+	height: 100vh;
+	background-color:/*transparent;*/#804567;/* rgba(97, 86, 113, 0.5);*/
+	transition: all 0.5s;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-bottom: 25px;
+	
+
+}
+
+
+.navbar ul::-webkit-scrollbar {/*滚动条整体样式*/
+	width: 0px;     /*高宽分别对应横竖滚动条的尺寸*/
+	height: 4px;
+	
+}
+/*.navbar ul::-webkit-scrollbar-thumb 
+{滚动条里面小方块
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0 0 5px #7c97eb);
+	background: #7c97eb;
+}
+
+.navbar ul::-webkit-scrollbar-track {/*滚动条里面轨道
+	-webkit-box-shadow: inset 0 0 5px rgba(248, 101, 101, 0.2);
+	border-radius: 0;
+	background: rgb(121, 119, 119);
+}*/
+
+
+.navbar input:checked + label {
+	left:350px;
+}
+.navbar input:checked + label i {
+	/* 沿着y轴旋转180度 */
+	transform: rotateY(180deg);
+}
+.navbar input:checked ~ ul {
+	left: 0px ;
+}
+
+
+.yiji {
+	color: aliceblue;
+	padding-top: 22px;
+	padding-left: 125px;
+	/*margin-top:30px ;*/
+	font-size: 20px;
+	list-style:none;
+	float: left;
+	width: 100%;
+	margin-bottom: 25px;
+	
+}
+
+.yiji1 {
+	color: aliceblue;
+	/*padding-top: 22px;*/
+	padding-left: 25px;
+	/*margin-top:30px ;*/
+	font-size: 20px;
+	list-style:none;
+	float: left;
+	width: 100%;
+	
+}
+
+.erji {
+	color: aliceblue;
+	/*padding: 6px;*/
+	padding-left: 20px;
+/*	margin-top:30px ;*/
+	/*font-size: 14px;*/
+	float: left;
+	height: 80px;
+	width: 80px;
+	list-style:none;
+	
+	/*padding-bottom: 70px;*/
+	
+/*	display: inline-block;*/
+	
+}
+
+
+.sanji{
+	line-height: 0;
+	height: 56px;
+	width: 56px;
+
+	display: inline-block;
+	background-color: #fafafa;
+	/*padding: 8px;*/
+	border-radius: 8px;
+	box-shadow: 0 5px 15px -5px rgba(0,0,0,0.5);
+
+}
+
+.svg{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	padding-top: 8px;
+}
+.tubiao{
+	font-size: 20px;
+}
+
+.tubiao1{
+	font-size: 8px;
+}
+
+
+.sanji:hover{
+	background-color: #f1e8e8;
+	margin-top: 5px;
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+	
+}
+.sanji:hover::after{
+	transition: all 0.5s ease;
+}
+.banquan {
+	color:rgb(245, 237, 237);
+	align-items: center;
+	justify-content: center;
+
+}
+#footer {
+                height: 40px;
+                line-height: 40px;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+                background:transparent;
+                color: #fff;
+                font-family: Arial;
+                font-size: 15px;
+                letter-spacing: 1px;
+				float: left;
+            }
+			
+			.last{
+				text-decoration:none;
+
+			}
+			.last:hover{
+				color: rgb(8, 100, 100);
+				
+			}
+
+
+			#mytitle {
+				position: absolute;
+				color: #ffffff;
+				font-size: 14px;
+				padding: 4px;
+				background: rgba(40, 40, 40, 0.8);
+				border-radius:5px;
+				z-index:999;
+			}
+		
